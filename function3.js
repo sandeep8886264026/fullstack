@@ -1,13 +1,9 @@
-function ipldetails(RCB,MI,DC,SRH,LG)
-{
-    console.log("effective player :": RCB);
-    console.log("effective player: ": MI);
-    console.log("effective player: ":DC);
-    console.log("effective player: ":SRH);
-    console.log("effective player: ":LG);
-
-
-
+function ipldetails(RCB, MI, DC, SRH, LG) {
+    if (RCB) console.log("Effective player:", RCB);
+    if (MI) console.log("Effective player:", MI);
+    if (DC) console.log("Effective player:", DC);
+    if (SRH) console.log("Effective player:", SRH);
+    if (LG) console.log("Effective player:", LG);
 }
 
-ipldetails("kohli","rohit","kl rahul")
+ipldetails("Kohli", "Rohit", "KL Rahul");

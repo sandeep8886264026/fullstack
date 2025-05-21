@@ -1,64 +1,68 @@
-function customerdetails(location,dob,number,company){
-    let customername="SANDEEP";
-    console.log("CustomerName: " +customername);
-    console.log("CustomerLocation: "+location)
-    console.log("CustomerDOB: "+dob)
-    console.log("CustomerNumber: " +number)
-    console.log("CustomerCompany: " +company)
-    
+// Function with parameters and arguments
+function customerDetails(location, dob, number, company) {
+    let customerName = "SANDEEP";
+    console.log("Customer Name: " + customerName);
+    console.log("Customer Location: " + location);
+    console.log("Customer DOB: " + dob);
+    console.log("Customer Number: " + number);
+    console.log("Customer Company: " + company);
 }
-customerdetails("KDP",30/04/1996","8886264026","SHIFHA")
 
-//here (location,dob,number,comapny )these are parameters.
-//here (""KDP",30/04/1996","8886264026","SHIFHA"") are arguments.
+// Corrected date argument (should be in quotes)
+customerDetails("KDP", "30/04/1996", "8886264026", "SHIFHA");
 
-function companydetails( name,branchno,numofbranches){
-    let branchesstates=["AP","TS","TN"]
-    let telanganabranches=["HYD","WARANGAL"] //Implemented array
-    var andhrabranches ={                   //Implemented Object
-        branch1:"Vijayawada",
-        branch2:"Amaravathi",
-        branch3:"Kadapa",
- 
-    }
-    console.log("CompanyName: " +name)
-    console.log("TamilBranche:" +branchesstates[2])
-    console.log("TS Branch:" +telanganabranches[0])
-    console.log("Branches in Rayalaseema: " +andhrabranches.branch3)
 
+// Function demonstrating array and object usage
+function companyDetails(name, branchNo, numOfBranches) {
+    let branchesStates = ["AP", "TS", "TN"];
+    let telanganaBranches = ["HYD", "WARANGAL"]; // Array
+    let andhraBranches = {                       // Object
+        branch1: "Vijayawada",
+        branch2: "Amaravathi",
+        branch3: "Kadapa",
+    };
+
+    console.log("Company Name: " + name);
+    console.log("Tamil Nadu Branch: " + branchesStates[2]);
+    console.log("TS Branch: " + telanganaBranches[0]);
+    console.log("Branch in Rayalaseema: " + andhraBranches.branch3);
 }
-companydetails("SHIFHA","2","5")
- //optional parameter
-function movie( moviename,hero,heroine,language,releasedate,collection){
-    console.log("MOVIENAME:" +moviename)
-   console.log("HERONAME: " +hero)
-    console.log("HEROINENAME: " +heroine)
-    console.log("MovieLangiage: "+language)
-     releasedate = releasedate || "May 1st"; 
-    console.log("MovieReleaseDate: " +releasedate)
-   
-    console.log("MOVIECOLLECTION:" +collection)
+
+companyDetails("SHIFHA", "2", "5");
+
+
+// Function with optional parameter using fallback (||)
+function movie(movieName, hero, heroine, language, releaseDate, collection) {
+    releaseDate = releaseDate || "May 1st"; // Fallback value
+    console.log("Movie Name: " + movieName);
+    console.log("Hero Name: " + hero);
+    console.log("Heroine Name: " + heroine);
+    console.log("Language: " + language);
+    console.log("Release Date: " + releaseDate);
+    console.log("Collection: " + collection);
 }
-movie("HIT3","NANI","SRINIDHI","TELUGU","", "150cr")
 
-//default parameter
+movie("HIT3", "NANI", "SRINIDHI", "TELUGU", "", "150cr");
 
-function paper(name,owner,language, origin="Andhra Pradesh"){
-    document.write("Papername: " +name)
-    document.write("PaperOwner: " +owner)
-    document.write("PaperLanguage: " +language)
-    document.write("PaperOrigin: " +origin)
 
+// Function with default parameter
+function paper(name, owner, language, origin = "Andhra Pradesh") {
+    console.log("Paper Name: " + name);
+    console.log("Owner: " + owner);
+    console.log("Language: " + language);
+    console.log("Origin: " + origin);
 }
-paper("ENADU","RamojiNaidu","Telugu")
-console.log(paper)
 
-//rest parameters
-function music(... parameters){
-    console.log(parameters)
-console.log("MUSICRECTOR: " +parameters[0])
-console.log("MOVIENAME: " +parameters[1])
-console.log("MUSICLANGUAGE:" +parameters[2])
-console.log("MOVIEDIRECTOR:" +parameters[3])
+paper("ENADU", "Ramoji Naidu", "Telugu");
+
+
+// Function using rest parameters
+function music(...parameters) {
+    console.log("All Parameters:", parameters);
+    console.log("Music Director: " + parameters[0]);
+    console.log("Movie Name: " + parameters[1]);
+    console.log("Music Language: " + parameters[2]);
+    console.log("Movie Director: " + parameters[3]);
 }
-music("A.R.RAHMAN","BOMBAY","MULTIPLE","MANI RTANAM")
+
+music("A.R.RAHMAN", "BOMBAY", "MULTIPLE", "MANI RATNAM");

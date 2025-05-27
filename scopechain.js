@@ -18,3 +18,4 @@
     // console.log("scope1:", fruit2); // ❌ ReferenceError
     // console.log("scope1:", fruit3); // ❌ ReferenceError
 }
+
